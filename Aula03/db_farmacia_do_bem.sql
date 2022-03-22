@@ -61,10 +61,10 @@ SELECT * FROM tb_produto WHERE valor > 50;
 
 SELECT * FROM tb_produto WHERE valor BETWEEN 3 AND 60;
 
-SELECT * FROM tb_produto WHERE nome LIKE "b%";
+SELECT * FROM tb_produto WHERE nome LIKE "%b%";
 
-SELECT nome, descricao, valor, quantidade FROM tb_produto INNER JOIN tb_categoria
+SELECT * FROM tb_produto INNER JOIN tb_categoria
 ON tb_produto.categoria_id = tb_categoria.id;
 
-SELECT nome, descricao FROM tb_produto INNER JOIN tb_categoria
+SELECT * FROM tb_produto INNER JOIN tb_categoria
 ON tb_produto.categoria_id = tb_categoria.id WHERE tb_categoria.id = 5;

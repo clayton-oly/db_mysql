@@ -50,7 +50,7 @@ INSERT INTO tb_classe (nome, taxa, bonus)
 VALUES ("ATIRADOR", 50, 600);
 
 INSERT INTO tb_classe (nome, taxa, bonus)
-VALUES ("ASSASINO", 60, 700);
+VALUES ("ASSASSINO", 60, 700);
 
 INSERT INTO tb_classe (nome, taxa, bonus)
 VALUES ("LUTADOR", 20, 200);
@@ -65,10 +65,10 @@ SELECT * FROM tb_personagem WHERE  ataque > 2000;
 
 SELECT * FROM tb_personagem WHERE  defesa BETWEEN 1000 AND 2000;
 
-SELECT * FROM tb_personagem  WHERE nome LIKE "c%";
+SELECT * FROM tb_personagem  WHERE nome LIKE "%c%";
 
-SELECT tb_personagem.nome, nivel, ataque, defesa, tb_classe.nome, taxa, bonus FROM tb_personagem INNER JOIN tb_classe
+SELECT * FROM tb_personagem INNER JOIN tb_classe
 ON tb_personagem.id_classe = tb_classe.id;
 
-SELECT tb_personagem.nome, tb_classe.nome FROM tb_personagem INNER JOIN tb_classe
+SELECT * FROM tb_personagem INNER JOIN tb_classe
 ON tb_personagem.id_classe = tb_classe.id WHERE tb_classe.id = 1;
